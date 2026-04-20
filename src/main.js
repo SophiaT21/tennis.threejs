@@ -105,9 +105,9 @@ window.addEventListener('resize', () => {
 
 // TERRAIN
 const textureLoader = new THREE.TextureLoader()
-const colorMap  = textureLoader.load('./textures/Ground054_1K-JPG_Color.jpg')
-const normalMap = textureLoader.load('./textures/Ground054_1K-JPG_NormalGL.jpg')
-const roughMap  = textureLoader.load('./textures/Ground054_1K-JPG_Roughness.jpg')
+const colorMap  = textureLoader.load('/tennis.threejs/textures/Ground054_1K-JPG_Color.jpg')
+const normalMap = textureLoader.load('/tennis.threejs/textures/Ground054_1K-JPG_NormalGL.jpg')
+const roughMap  = textureLoader.load('/tennis.threejs/textures/Ground054_1K-JPG_Roughness.jpg')
 ;[colorMap, normalMap, roughMap].forEach(t => {
   t.wrapS = THREE.RepeatWrapping
   t.wrapT = THREE.RepeatWrapping
@@ -190,7 +190,7 @@ let sphere = new THREE.Object3D()
 sphere.position.set(6, 3, 15)
 scene.add(sphere)
 
-gltfLoader.load('./models/balle.glb', (gltf) => {
+gltfLoader.load('/tennis.threejs/models/balle.glb', (gltf) => {
   scene.remove(sphere)
   sphere = gltf.scene
   sphere.scale.set(0, 0, 0)
